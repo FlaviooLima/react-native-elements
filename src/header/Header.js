@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import isEmpty from 'lodash.isempty';
 import DummyNavButton from './DummyNavButton';
 import NavButton from './NavButton';
@@ -62,7 +62,6 @@ function populateChildren(propChildren, placement, centerComponentStyle) {
 const Header = props => {
   const {
     children,
-    statusBarProps,
     leftComponent,
     centerComponent,
     centerComponentStyle,
@@ -97,7 +96,6 @@ const Header = props => {
         outerContainerStyles,
       ]}
     >
-      <StatusBar barStyle="light-content" {...statusBarProps} />
       <View style={[styles.innerContainer, innerContainerStyles]}>
         {propChildren.length > 0 ? propChildren : children}
       </View>
@@ -118,7 +116,6 @@ Header.propTypes = {
     PropTypes.element,
     PropTypes.arrayOf(PropTypes.element),
   ]),
-  statusBarProps: PropTypes.object,
 };
 
 Header.defaultProps = {
