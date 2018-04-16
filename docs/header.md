@@ -82,7 +82,6 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 
 ```js
 <Header
-  statusBarProps={{ barStyle: 'light-content' }}
   leftComponent={<MyCustomLeftComponent />}
   centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
   outerContainerStyles={{ backgroundColor: '#3D6DCC' }}
@@ -100,7 +99,6 @@ We wanted the Header to be as customisable as possible, so you are free to try d
 * [`outerContainerStyles`](#outercontainerstyles)
 * [`placement`](#placement)
 * [`rightComponent`](#rightcomponent)
-* [`statusBarProps`](#statusbarprops)
 
 ---
 
@@ -183,13 +181,3 @@ define your right component here
 |                                                                 Type                                                                  | Default |
 | :-----------------------------------------------------------------------------------------------------------------------------------: | :-----: |
 | configuration object for default component (icon: string, ...props for React Native Elements Icon component) or a valid React Element |  none   |
-
----
-
-### `statusBarProps`
-
-accepts all props for StatusBar
-
-|      Type      | Default |
-| :------------: | :-----: |
-| object (props) |  none   |
