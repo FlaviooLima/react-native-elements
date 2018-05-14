@@ -34,6 +34,7 @@ class Button extends Component {
 
   render() {
     const {
+      children,
       TouchableComponent,
       containerStyle,
       onPress,
@@ -81,7 +82,10 @@ class Button extends Component {
           activeOpacity={clear ? 0 : undefined}
           disabled={disabled}
         >
-          <ViewComponent
+       {(children) &&
+            children
+            ||
+          (<ViewComponent
             {...linearGradientProps}
             style={[
               styles.button,
@@ -127,7 +131,7 @@ class Button extends Component {
               renderNode(Icon, icon, {
                 containerStyle: [styles.iconContainer, iconContainerStyle],
               })}
-          </ViewComponent>
+          </ViewComponent>)}
         </TouchableComponent>
       </View>
     );
